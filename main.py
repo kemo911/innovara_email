@@ -18,6 +18,14 @@ def send_email():
 
     email = data['email'] 
     name = data['name']
+    phone = data['phone']
+    looking = data['looking_for']
+    service_selector = data['service_selector']
+    custom_service = data['custom_service']
+    industry = data['industry']
+    custom_industry = data['custom_industry']
+    number_of_employees = data['number_of_employees']
+    message = data['message']
 
     payload = {
         "sender": {
@@ -35,12 +43,21 @@ def send_email():
         <html>
         <head></head>
         <body>
-            <p>Hello {name},</p>
+            <p>Name : {name},</p>
+            <p>Email : {email},</p>
+            <p>Phone : {phone},</p>
+            <p>Looking For : {looking},</p>
+            <p>Selected Service : {service_selector},</p>
+            <p>Custom Service  : {custom_service},</p>
+            <p>Industry : {industry},</p>
+            <p>Custom Industry : {custom_industry},</p>
+            <p>Number of employees : {number_of_employees},</p>
+            <p>Message : {message},</p>
             <p>This is my first transactional email sent from Brevo.</p>
-            <p>If you wish to unsubscribe, please click <a href="http://example.com/unsubscribe?email={email}">here</a>.</p>
         </body>
         </html>
-        """.format(name=name, email=email)
+        """.format(name=name, email=email,phone=phone,looking=looking,service_selector=service_selector,custom_service=custom_service,industry=industry,custom_industry=custom_industry
+                   ,number_of_employees=number_of_employees,message=message)
     }
 
     headers = {
