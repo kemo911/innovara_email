@@ -16,7 +16,7 @@ def send_email():
     if not data or 'email' not in data or 'name' not in data:
         return jsonify({"error": "Email and name are required"}), 400
 
-    email = data['email']
+    email = data['email'] 
     name = data['name']
 
     payload = {
