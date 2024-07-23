@@ -38,7 +38,7 @@ def send_email():
                 "name": 'Karim'
             }
         ],
-        "subject": "Hello world",
+        "subject": "Email from EchoMinds",
         "htmlContent": """
         <html>
         <head></head>
@@ -53,7 +53,6 @@ def send_email():
             <p>Custom Industry : {custom_industry},</p>
             <p>Number of employees : {number_of_employees},</p>
             <p>Message : {message},</p>
-            <p>This is my first transactional email sent from Brevo.</p>
         </body>
         </html>
         """.format(name=name, email=email,phone=phone,looking=looking,service_selector=service_selector,custom_service=custom_service,industry=industry,custom_industry=custom_industry
