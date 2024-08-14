@@ -58,7 +58,7 @@ def send_email():
         </body>
         </html>
         """.format(name=name, email=email,phone=phone,looking=looking,service_selector=service_selector,custom_service=custom_service,industry=industry,custom_industry=custom_industry
-                   ,number_of_employees=number_of_employees,message=message)
+                   ,number_of_employees=number_of_employees,message=message,pageSource=pageSource)
     }
 
     headers = {
