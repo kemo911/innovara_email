@@ -26,6 +26,7 @@ def send_email():
     custom_industry = data['custom_industry']
     number_of_employees = data['number_of_employees']
     message = data['message']
+    pageSource = data['pageSource']
 
     payload = {
         "sender": {
@@ -53,6 +54,7 @@ def send_email():
             <p>Custom Industry : {custom_industry},</p>
             <p>Number of employees : {number_of_employees},</p>
             <p>Message : {message},</p>
+            <p>Source Page : {pageSource},</p>
         </body>
         </html>
         """.format(name=name, email=email,phone=phone,looking=looking,service_selector=service_selector,custom_service=custom_service,industry=industry,custom_industry=custom_industry
